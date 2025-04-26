@@ -1,0 +1,30 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Run Java with IO (PowerShell)",
+            "type": "shell",
+            "command": "java",
+            "args": [
+                "HallowSquarePattern_I"
+            ],
+            "presentation": {
+                "reveal": "never"
+            },
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": [],
+            "options": {
+                "shell": {
+                    "executable": "powershell",
+                    "args": [
+                        "-Command",
+                        "Get-Content input.txt | java HallowSquarePattern_I | Out-File output.txt"
+                    ]
+                }
+            }
+        }
+    ]
+}
